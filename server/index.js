@@ -22,7 +22,7 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/farmconnect', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://bhagya_db_user:12345@cluster0.jrcyyu9.mongodb.net/?appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

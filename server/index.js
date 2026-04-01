@@ -15,10 +15,6 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
 // Middleware
 app.use(cors({origin: "*"}));
 app.use(express.json());
@@ -275,5 +271,5 @@ if (!fs.existsSync('uploads')) {
 }
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

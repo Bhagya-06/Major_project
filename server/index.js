@@ -22,8 +22,16 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => console.log(err));;
+  .then(() => {
+    console.log("MongoDB connected");
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+
+  })
+  .catch(err => {
+    console.error("MongoDB connection error:", err);
+  });
 
 // User Schema
 const userSchema = new mongoose.Schema({
@@ -270,6 +278,3 @@ if (!fs.existsSync('uploads')) {
   fs.mkdirSync('uploads');
 }
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});

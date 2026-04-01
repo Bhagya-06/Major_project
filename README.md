@@ -1,6 +1,7 @@
 # FarmConnect - Farmer-Buyer Marketplace MVP
 
 A comprehensive full-stack MVP for connecting farmers and buyers with voice-enabled crop listing, AI-powered pricing, and analytics dashboards.
+[Click here to view our MVP](https://farmconnectai.vercel.app/)
 
 ## 🌟 Features
 
